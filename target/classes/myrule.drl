@@ -1,0 +1,8 @@
+package demo
+import com.drools.User
+rule "printAllUsers"
+  when
+  $user : User(position == "President")
+  then
+  System.out.println(String.format("User: %s %s %s", $user.getCompany(), $user.getName(), $user.getPosition()));
+end
